@@ -1,0 +1,260 @@
+/* 根据我们写的最小的宽度是1400px */
+html,
+body {
+  min-width: 1400px;
+  /* height: 4000px; */
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  width: 623px;
+  flex: 1;
+  height: 100px;
+  padding-left: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoText {
+  padding: 0 20px;
+  font-size: 26px;
+  font-family: "微软雅黑";
+}
+.search {
+  width: 660px;
+  height: 100px;
+  padding-right: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchInput {
+  flex: 1;
+  height: 46px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 23px;
+  /* overflow: hidden; */
+}
+.searchBtn,
+.input {
+  display: flex;
+}
+.searchBtn {
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 14px;
+}
+
+.navList {
+  width: 360px;
+  height: 100px;
+  display: flex;
+  padding-right: 70px;
+  justify-content: space-around;
+  align-items: center;
+}
+.navList .navItem {
+  font-size: 24px;
+}
+.navList .navItem.icon {
+  font-size: 30px;
+}
+
+.chooseList {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -130px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  left: 0;
+  overflow: hidden;
+  transition: all 1s;
+  background-color: #fff;
+}
+.chooseList .chooseItem {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #666;
+}
+.chooseList .chooseItem:hover {
+  background-color: rgb(218, 236, 248);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiperMain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-container h1 {
+  font-size: 60px;
+  color: #fff;
+}
+.swiper-container h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: normal;
+  margin: 0;
+  /* 单词间隔 */
+  letter-spacing: 10px;
+}
+.swiper-container p span {
+  color: #fff;
+  padding: 0 5px;
+}
+
+.swiper-container .swiperBtn {
+  display: flex;
+}
+.swiper-container .swiperBtn > div {
+  width: 170px;
+  height: 55px;
+  display: flex;
+  color: #fff;
+  border-radius: 27.5px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 18px #000;
+  margin: 0 15px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(5, 217, 245, 60%)
+  );
+  transition: all 2s;
+}
+.swiper-container .swiperBtn > div:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(135, 235, 233, 1) 0%,
+    rgba(5, 217, 245, 60%)
+  );
+}
+.swiper-container .swiperBtn > div > span {
+  margin: 0 5px;
+}
+
+.swiper-container .swiper-button-prev,
+.swiper-container .swiper-button-next {
+  color: #fff;
+}
+
+/* 优势 */
+.goodness {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.goodness h2,
+.course h2,
+.friend h2 {
+  font-size: 30px;
+  margin: 70px auto;
+}
+.goodness .goodList {
+  display: flex;
+  justify-content: center;
+}
+.goodList .goodItem {
+  width: 260px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+}
+.goodList .goodItem .desc {
+  width: 100%;
+  height: 40px;
+  color: #999;
+}
+/* 教程 */
+.course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.courseList {
+  display: flex;
+}
+.courseList .courseItem {
+  width: 400px;
+  height: 386px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #efefef;
+  margin: 0 20px;
+  box-shadow: 0 0px 0px #fff;
+  transition: all 0.5s;
+}
+.courseList .courseItem:hover {
+  box-shadow: 0 10px 15px #666;
+}
+.courseList .courseItem img {
+  width: 100%;
+  height: 266px;
+}
+.courseList .courseItem h3 {
+  margin: 10px 20px 5px;
+}
+.courseList .courseItem p {
+  margin: 10px 20px 5px;
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* 合作伙伴 */
+.friend {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+.friends {
+  display: flex;
+  justify-content: center;
+}
+.friends img {
+  margin: 0 10px;
+}
+
+.footer {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.footer a {
+  color: lightslategray;
+}

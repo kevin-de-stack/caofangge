@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_2891829_1xr2h2g7slb.css">
+	<script src="js/nav.js"></script>
+</head>
+
+<body>
+	<div class="nav">
+		<div class="logo">
+			<div class="logoImg"><img src="imgs/logo.png" alt="草方格·Square"></div>
+			<div class="logoText">草方格·Square</div>
+		</div>
+		<div class="search">
+			<div class="searchInput">
+				<div class="searchBtn">
+					<div class="text">商品</div>
+					<div class="icon iconfont icon-xiangxia"></div>
+				</div>
+				<div class="input">
+					<div class="icon iconfont icon-sousuo"></div>
+					<input type="text" placeholder="请输入搜索的艺术品、专辑或艺术家">
+				</div>
+			</div>
+		</div>
+		<div class="navList">
+			<div class="navItem">商城</div>
+			<div class="navItem icon iconfont icon-renzheng"></div>
+			<div class="navItem icon iconfont icon-qianbao"></div>
+			<div class="navItem icon iconfont icon-bangzhu"></div>
+		</div>
+	</div>
+
+
+
+	<div id="swiper" class="swiper" style="width: 100%;height: 980px;">
+		<!-- 轮播的图片或视频 -->
+
+	</div>
+
+	<div class="zhezhao">
+		<div class="loginContent">
+			<div class="close">X</div>
+		</div>
+	</div>
+	<script src="js/login.js"></script>
+	<script src="js/lcSwiper.js"></script>
+	<script>
+		lcSwiper('#swiper', [
+			{
+				type: "video",
+				imgSrc: "./imgs/video1.mp4"
+			},
+			{
+				type: "video",
+				imgSrc: "./imgs/video2.mp4"
+			}
+		])
+	</script>
+</body>
+
+</html>

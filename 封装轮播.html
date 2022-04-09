@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/swiper.css">
+</head>
+
+<body>
+	<div id="swiper" class="swiper">
+		<!-- 轮播的图片或视频 -->
+
+	</div>
+	<div id="lunbo2" class="swiper" style="width: 800px;height: 600px;"></div>
+	<script src="js/lcSwiper.js"></script>
+
+	<script>
+
+
+
+
+
+
+		lcSwiper('#swiper', [
+			{
+				type: "image",
+				imgSrc: "./imgs/swiper1.jpg"
+			},
+			{
+				type: "video",
+				imgSrc: "./imgs/video1.mp4"
+			},
+			{
+				type: "video",
+				imgSrc: "./imgs/video2.mp4"
+			}
+		])
+
+		lcSwiper('#lunbo2', [
+			{
+				type: "image",
+				imgSrc: "./imgs/swiper1.jpg"
+			},
+			{
+				type: "video",
+				imgSrc: "./imgs/video1.mp4"
+			},
+			{
+				type: "video",
+				imgSrc: "./imgs/video2.mp4"
+			}
+		])
+
+	</script>
+
+
+
+</body>
+
+</html>

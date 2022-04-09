@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/swiper.css">
+</head>
+
+<body>
+	<div id="swiper" class="swiper">
+		<!-- 轮播的图片或视频 -->
+		<div class="imgList">
+			<div class="imgItem active" data-index="0">
+				<img src="imgs/swiper1.jpg" alt="">
+			</div>
+			<div class="imgItem" data-index="1">
+				<img src="imgs/swiper2.webp" alt="">
+			</div>
+			<div class="imgItem" data-index="2">
+				<img src="imgs/swiper3.jpg" alt="">
+			</div>
+			<div class="imgItem" data-index="3">
+				<img src="imgs/swiper4.webp" alt="">
+			</div>
+		</div>
+		<!-- 左右2个按钮 -->
+		<div class="swiperBtn">
+			<div class="leftBtn"></div>
+			<div class="rightBtn"></div>
+		</div>
+		<!-- 根据图片或视频数量生成小圆点 -->
+		<div class="circleList"></div>
+	</div>
+	<script>
+		// var arrVideo = [video1,video2];
+
+		// lcSwiper(arrImg)
+
+	</script>
+
+	<script>
+		// 1、页面结构
+		// 2、页面功能交互
+		// 3、提取动态改变变量，封装成函数
+		var currentPage = 0;
+		var beforePage = null;
+		var afterPage = null;
+
+		var imgList = document.querySelectorAll('.swiper .imgItem');
+		var leftBtn = document.querySelector('.swiper .leftBtn')
+		var rightBtn = document.querySelector('.swiper .rightBtn')
+
+		leftBtn.onclick = function () {
+			beforePage = currentPage;
+			currentPage--;
+			if (currentPage < 0) {
+				currentPage = imgList.length - 1;
+			}
+			imgList.forEach(function (item, i) {
+				if (item.dataset.index == currentPage) {
+					item.className = "imgItem leftActive";
+					circleList[i].className = "circle active"
+
+				} else if (item.dataset.index == beforePage) {
+					imgList[beforePage].className = 'imgItem leftBefore'
+					circleList[i].className = "circle"
+				} else {
+					item.className = "imgItem"
+					circleList[i].className = "circle"
+				}
+
+			})
+
+		}
+
+		rightBtn.onclick = function () {
+			rightPage = currentPage;
+			currentPage++;
+			if (currentPage == imgList.length) {
+				currentPage = 0;
+			}
+			imgList.forEach(function (item, i) {
+				if (item.dataset.index == currentPage) {
+					item.className = "imgItem rightActive";
+					circleList[i].className = "circle active"
+
+				} else if (item.dataset.index == rightPage) {
+					imgList[rightPage].className = 'imgItem rightBefore'
+					circleList[i].className = "circle"
+				} else {
+					item.className = "imgItem"
+					circleList[i].className = "circle"
+				}
+
+			})
+
+		}
+
+
+		var circleListDiv = document.querySelector('.swiper .circleList');
+		imgList.forEach(function (item, i) {
+			if (i == 0) {
+				circleListDiv.innerHTML += ('<div data-index="' + i + '" class="circle active"></div>')
+			} else {
+				circleListDiv.innerHTML += ('<div data-index="' + i + '" class="circle"></div>')
+			}
+
+		})
+
+		var circleList = document.querySelectorAll('.circle');
+
+	</script>
+
+
+
+</body>
+
+</html>
